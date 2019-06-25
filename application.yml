@@ -1,0 +1,13 @@
+logging:
+  config: 'logback.xml'
+spring:
+  cache:
+    type: none
+  main:
+    allow-bean-definition-overriding: true
+  datasource:
+    url: jdbc:h2:mem:testdb
+    username: sa
+    password: password
+  jpa:
+    database-platform: org.hibernate.dialect.H2Dialect

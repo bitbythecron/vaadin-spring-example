@@ -1,0 +1,44 @@
+buildscript {
+    repositories {
+        mavenCentral()
+    }
+    dependencies {
+        classpath("org.springframework.boot:spring-boot-gradle-plugin:1.5.8.RELEASE")
+    }
+}
+
+plugins {
+    id 'java-library'
+}
+
+apply plugin: 'org.springframework.boot'
+
+repositories {
+    mavenLocal()
+    mavenCentral()
+    jcenter()
+}
+
+dependencies {
+    compile(
+        'ch.qos.logback:logback-classic:1.2.3'
+        ,'org.slf4j:jul-to-slf4j:1.7.25'
+        ,'org.apache.commons:commons-lang3:3.7'
+        ,'commons-io:commons-io:2.6'
+        ,'org.apache.commons:commons-text:1.2'
+        ,'com.google.guava:guava:23.0'
+        ,'com.vaadin:vaadin-spring-boot-starter:13.0.8'
+        ,'org.springframework.boot:spring-boot-starter-actuator'
+        ,'org.springframework.boot:spring-boot-starter-data-jpa'
+        ,'com.h2database:h2'
+    )
+
+}
+
+sourceCompatibility = 1.8
+targetCompatibility = 1.8
+String buildName = 'vaadin-spring-example'
+
+jar {
+    baseName = buildName
+}
