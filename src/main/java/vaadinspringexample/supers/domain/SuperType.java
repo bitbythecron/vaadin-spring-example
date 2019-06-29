@@ -13,4 +13,16 @@ public enum SuperType {
     public String getLabel() {
         return label;
     }
+
+    public static SuperType lookup(String label) {
+
+        for (SuperType superType : values()) {
+            if (superType.label.equals(label)) {
+                return superType;
+            }
+        }
+
+        return null;
+
+    }
 }

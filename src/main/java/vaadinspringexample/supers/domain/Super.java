@@ -1,19 +1,20 @@
 package vaadinspringexample.supers.domain;
 
-import java.util.EnumSet;
+import java.util.List;
 
 public class Super {
     private String nickname;
     private SuperType superType;
-    private EnumSet<Power> powers;
+    private List<String> powers;
 
     public Super() {
-        this(null, null);
+        this(null, null, null);
     }
 
-    public Super(String nickname, SuperType superType) {
+    public Super(String nickname, SuperType superType, List<String> powers) {
         this.nickname = nickname;
         this.superType = superType;
+        this.powers = powers;
     }
 
     public String getNickname() {
@@ -32,11 +33,11 @@ public class Super {
         this.superType = superType;
     }
 
-    public EnumSet<Power> getPowers() {
+    public List<String> getPowers() {
         return powers;
     }
 
-    public void setPowers(EnumSet<Power> powers) {
+    public void setPowers(List<String> powers) {
         this.powers = powers;
     }
 }
